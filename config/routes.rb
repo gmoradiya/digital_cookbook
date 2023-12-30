@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'home#search'
 
-  get 'search', to: 'home#index', as: 'search'
+  resources :recipes, only: [:index]
 end
