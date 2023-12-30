@@ -15,7 +15,7 @@ class Recipe < ApplicationRecord
     if ingredient.present?
       query =  query.joins(:ingredients).where('lower(ingredients.name) LIKE ?', "%#{ingredient.downcase}%")
     end
-    
+
     query
   end
 

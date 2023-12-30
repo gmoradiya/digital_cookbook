@@ -30,4 +30,13 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      taken: has already been taken
+      blank: should be present
+      too_long: Maximum characters should be %{count} 
+      not_a_number: Should be number
+      greater_than: Shuld be > %{count}
