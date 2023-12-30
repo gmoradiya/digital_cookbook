@@ -9,19 +9,8 @@ Things you may want to cover:
 
 * rails Version 7.0.7
 
-* System dependencies
-
 * Configuration
 
-* Database creation
-rails dB:create db:migrate db:seed
+* Database creating and adding data
+  - rails dB:create db:migrate db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
