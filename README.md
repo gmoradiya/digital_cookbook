@@ -9,8 +9,6 @@ Things you may want to cover:
 
 * rails Version 7.0.7
 
-* Configuration
-
 * Database creating and adding data
-  - rails dB:create db:migrate db:seed
+  - rails db:create db:migrate db:seed
 
