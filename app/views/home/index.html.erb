@@ -1,0 +1,21 @@
+<%= link_to "Home", root_path %>
+<% if @recipes.present? %>
+  <% search_params = [] %>
+  <% search_params << "cuisine: #{params[:cuisine]}" if params[:cuisine].present? %>
+  <% search_params <<"ingredient: #{params[:ingredient]}" if params[:ingredient].present?%>
+  <h2>List Of Recipes search based on <%= search_params.join(' And ')%></h2>
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li>
+        <strong><%= recipe.name %></strong>
+        <ul>
+          <li>Instructions: <%= recipe.instructions %></li>
+          <li>Cooking Time: <%= recipe.cooking_time %> min</li>
+          <li>Ingredients: <%= recipe.ingredients.pluck(:name).map{ |name| name.downcase.include?(params[:ingredient].to_s.downcase) ? "<strong> #{name} </strong>" : "#{name}" }.join(', ').html_safe %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No recipes found.</p>
+<% end %>

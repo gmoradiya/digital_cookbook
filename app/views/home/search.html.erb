@@ -1,0 +1,12 @@
+<h1>Search Recipes</h1>
+<%= form_with(url: search_path, method: "get") do |form| %>
+  <div>
+    <%= form.label :cuisine %>
+    <%= form.text_field :cuisine %>
+  </div>
+  <div>
+    <%= form.label :ingredient %>
+    <%= form.text_field :ingredient %>
+  </div>
+  <%= form.submit "Search" %>
+<% end %>
